@@ -7,6 +7,7 @@ import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
 import { ThemeProvider } from "../components/ThemeContext";
 import { LanguageProvider } from "../components/LanguageContext";
+import { Timeline } from "@/components/Timeline";
 
 export default function Home() {
 	return (
@@ -22,6 +23,9 @@ export default function Home() {
 						{/* <section id="projects">
           <Projects />
         </section> */}
+						<section id="timeline">
+							<Timeline />
+						</section>
 						<section id="about">
 							<About />
 						</section>

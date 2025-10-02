@@ -23,10 +23,10 @@ export function Navigation() {
 	}, []);
 
 	const navItems = [
-		{ label: "nav.about", href: "#about" },
-		{ label: "nav.skills", href: "#skills" },
+		{ label: t("nav.about"), href: "#about" },
+		{ label: t("nav.skills"), href: "#skills" },
 		// { label: "nav.projects", href: "#projects" },
-		{ label: "nav.contact", href: "#contact" },
+		{ label: t("nav.contact"), href: "#contact" },
 	];
 
 	return (
@@ -51,7 +51,7 @@ export function Navigation() {
 								href={item.href}
 								className="text-sm hover:text-primary transition-colors"
 							>
-								{t(item.label)}
+								{item.label}
 							</a>
 						))}
 						{/* Theme Toggle */}
@@ -107,6 +107,31 @@ export function Navigation() {
 				{/* Mobile Navigation */}
 				{isMobileMenuOpen && (
 					<div className="md:hidden border-t bg-background/95 backdrop-blur-sm">
+						<div className="flex items-center justify-between px-4 py-2">
+							<Button
+								variant="ghost"
+								size="icon"
+								onClick={toggleTheme}
+								className="w-9 h-9"
+							>
+								{theme === "light" ? (
+									<Moon className="h-4 w-4" />
+								) : (
+									<Sun className="h-4 w-4" />
+								)}
+							</Button>
+
+							{/* Language Toggle */}
+							<Button
+								variant="ghost"
+								size="sm"
+								onClick={toggleLanguage}
+								className="text-xs"
+							>
+								<Globe className="h-4 w-4 mr-1" />
+								{language.toUpperCase()}
+							</Button>
+						</div>
 						<div className="py-4 space-y-4">
 							{navItems.map((item) => (
 								<a
@@ -119,8 +144,14 @@ export function Navigation() {
 								</a>
 							))}
 							<div className="px-4">
-								<Button size="sm" className="w-full">
-									{t("nav.hire")}
+								<Button asChild size="sm" className="w-full">
+									<Link
+										href="https://www.linkedin.com/in/juanchixx/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<Linkedin className="h-5 w-5" />
+									</Link>
 								</Button>
 							</div>
 						</div>

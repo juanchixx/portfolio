@@ -47,6 +47,25 @@ const translations = {
 		"skills.clients": "Happy Clients",
 		"skills.satisfaction": "Client Satisfaction",
 
+        // Timeline
+        "timeline.title": "Professional Timeline",
+        "timeline.subtitle": "A snapshot of my career journey and key milestones",
+
+        "timeline.exp1.title": "Front End Developer | UI/UX Designer ",
+        "timeline.exp1.company": "Quarkslab",
+        "timeline.exp1.location": "Paris, France (Remote)",
+        "timeline.exp1.description": "Developed and optimized responsive web applications with React.js, improving page load speed. Designed and implemented automated tests, reducing bug occurrences. Enhanced user experience by creating wireframes and mockups in Figma. Integrated Material-UI components to ensure modern and consistent design.",
+
+        "timeline.exp2.title": ".NET Developer",
+        "timeline.exp2.company": "Procoop SRL",
+        "timeline.exp2.location": "Córdoba, Argentina",
+        "timeline.exp2.description": "Led development and maintenance of administration modules for cooperative systems nationwide. Designed and executed billing reports for services like electricity, gas, and phone, improving clarity and usability. Managed SQL Server databases, optimizing queries and enhancing performance. Conducted UX/UI improvements on core applications and websites.",
+
+        "timeline.exp3.title": "Front End Developer",
+        "timeline.exp3.company": "Control Global",
+        "timeline.exp3.location": "Córdoba, Argentina",
+        "timeline.exp3.description": "Fixed bugs and enhanced platform usability, improving system efficiency. Developed new features such as search modules and interactive guides, enhancing user experience. Redesigned UI following Google Material Design principles, ensuring consistency across devices. Managed databases, optimizing relationships and query performance.",
+
 		// Projects
 		"projects.title": "Featured Projects",
 		"projects.subtitle":
@@ -169,6 +188,25 @@ const translations = {
 			"Sitio portfolio limpio y minimalista que muestra principios de diseño responsivo y animaciones suaves usando Framer Motion.",
 		"projects.view": "Ver Proyecto",
 		"projects.code": "Ver Código",
+
+        // Timeline
+        "timeline.title": "Línea de Tiempo Profesional",
+        "timeline.subtitle": "Una instantánea de mi trayectoria profesional y hitos clave",
+
+        "timeline.exp1.title": "Desarrollador Front End | Diseñador UI/UX ",
+        "timeline.exp1.company": "Quarkslab",
+        "timeline.exp1.location": "París, Francia (Remoto)",
+        "timeline.exp1.description": "Desarrollé y optimicé aplicaciones web responsivas con React.js, mejorando la velocidad de carga. Diseñé e implementé pruebas automatizadas, reduciendo la ocurrencia de bugs. Mejoré la experiencia del usuario creando wireframes y mockups en Figma. Integré componentes de Material-UI para asegurar un diseño moderno y consistente.",
+
+        "timeline.exp2.title": "Desarrollador .NET",
+        "timeline.exp2.company": "Procoop SRL",
+        "timeline.exp2.location": "Córdoba, Argentina",
+        "timeline.exp2.description": "Lideré el desarrollo y mantenimiento de módulos administrativos para sistemas cooperativos a nivel nacional. Diseñé y ejecuté reportes de facturación para servicios como electricidad, gas y teléfono, mejorando la claridad y usabilidad. Gestioné bases de datos SQL Server, optimizando consultas y mejorando el rendimiento. Realicé mejoras UX/UI en aplicaciones y sitios web principales.",
+
+        "timeline.exp3.title": "Desarrollador Front End",
+        "timeline.exp3.company": "Control Global",
+        "timeline.exp3.location": "Córdoba, Argentina",
+        "timeline.exp3.description": "Corregí bugs y mejoré la usabilidad de la plataforma, aumentando la eficiencia del sistema. Desarrollé nuevas funcionalidades como módulos de búsqueda y guías interactivas, mejorando la experiencia del usuario. Rediseñé la UI siguiendo los principios de Google Material Design, asegurando consistencia en todos los dispositivos. Gestioné bases de datos, optimizando relaciones y el rendimiento de las consultas.",
 
 		// About
 		"about.title": "Acerca de mi",
