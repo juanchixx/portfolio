@@ -8,39 +8,41 @@ import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { sendEmail } from "@/utils/Hooks";
+import { useLanguage } from "./LanguageContext";
 
 export function Contact() {
-	const formRef = useRef<HTMLFormElement>(null) as React.RefObject<HTMLFormElement>;
+	const { t } = useLanguage();
+	const formRef = useRef<HTMLFormElement>(
+		null
+	) as React.RefObject<HTMLFormElement>;
 
-  const handleFormSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (!formRef) return;
-    
-    sendEmail(formRef);
-  };
+	const handleFormSubmit = (e: FormEvent) => {
+		e.preventDefault();
+		if (!formRef) return;
+
+		sendEmail(formRef);
+	};
 
 	return (
 		<section className="py-24">
 			<div className="container mx-auto px-6">
 				<div className="text-center mb-16">
 					<h2 className="text-3xl md:text-4xl mb-4">
-						Let's Work Together
+						{t("contact.title")}
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-						Ready to bring your ideas to life? I'm always excited to
-						discuss new opportunities and creative challenges.
+						{t("contact.subtitle")}
 					</p>
 				</div>
 
 				<div className="grid lg:grid-cols-2 gap-12">
 					<div className="space-y-8">
 						<div className="space-y-6">
-							<h3 className="text-2xl">Get in Touch</h3>
+							<h3 className="text-2xl">
+								{t("contact.getintouch")}
+							</h3>
 							<p className="text-muted-foreground leading-relaxed">
-								Whether you have a project in mind, need
-								consultation on your existing application, or
-								just want to chat about the latest in frontend
-								development, I'd love to hear from you.
+								{t("contact.description")}
 							</p>
 						</div>
 
@@ -63,77 +65,82 @@ export function Contact() {
 								</div>
 								<div>
 									<div className="text-sm text-muted-foreground">
-										Location
+										{t("contact.location")}
 									</div>
-									<div>Córdoba, ARG</div>
+									<div>{t("contact.locationValue")}</div>
 								</div>
 							</div>
 						</div>
 
 						<div className="space-y-4">
-							<h4 className="text-lg">Response Time</h4>
+							<h4 className="text-lg">{t("contact.response")}</h4>
 							<div className="text-sm text-muted-foreground space-y-2">
-								<div>• Email: Within 24 hours</div>
-								<div>• Project inquiries: Same day</div>
-								<div>• Urgent matters: Within 4 hours</div>
+								<div>• Email: {t("contact.responseValue")}</div>
 							</div>
 						</div>
 					</div>
 
 					<Card>
 						<CardHeader>
-							<CardTitle>Send a Message</CardTitle>
+							<CardTitle>{t("contact.send")}</CardTitle>
 						</CardHeader>
 						<CardContent className="space-y-6">
 							<form
 								ref={formRef}
 								onSubmit={handleFormSubmit}
-                className="gap-4 flex flex-col"
+								className="gap-4 flex flex-col"
 							>
-								<div className="grid grid-cols-2 gap-4">
-									<div className="space-y-2">
-										<Label htmlFor="name">
-											Name
-										</Label>
-										<Input
-											id="name"
-                      name="name"
-											placeholder="John Doe"
-										/>
-									</div>
+								<div className="space-y-2">
+									<Label htmlFor="name">
+										{t("contact.name")}
+									</Label>
+									<Input
+										id="name"
+										name="name"
+										placeholder="John Doe"
+									/>
 								</div>
 
 								<div className="space-y-2">
 									<Label htmlFor="email">Email</Label>
 									<Input
 										id="email"
-                    name="email"
+										name="email"
 										type="email"
 										placeholder="john@example.com"
+                    required
 									/>
 								</div>
 
 								<div className="space-y-2">
-									<Label htmlFor="subject">Subject</Label>
+									<Label htmlFor="subject">
+										{t("contact.subject")}
+									</Label>
 									<Input
 										id="subject"
-                    name="subject"
-										placeholder="Project Discussion"
+										name="subject"
+										placeholder={t(
+											"contact.subjectplaceholder"
+										)}
 									/>
 								</div>
 
 								<div className="space-y-2">
-									<Label htmlFor="message">Message</Label>
+									<Label htmlFor="message">
+										{t("contact.message")}
+									</Label>
 									<Textarea
 										id="message"
-                    name="message"
-										placeholder="Tell me about your project or what you'd like to discuss..."
+										name="message"
+										placeholder={t(
+											"contact.messageplaceholder"
+										)}
 										className="min-h-[120px]"
 									/>
 								</div>
 
 								<Button className="w-full group" type="submit">
-									Send Message
+									{t("contact.send")}
 									<Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
 								</Button>
 							</form>

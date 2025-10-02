@@ -1,43 +1,48 @@
+"use client";
+
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { useLanguage } from "./LanguageContext";
 
 const skills = [
   {
-    category: "Frontend Frameworks",
+    category: "skills.frontend",
     technologies: ["React", "Next.js"]
   },
   {
-    category: "Languages",
+    category: "skills.languages",
     technologies: ["JavaScript", "TypeScript", "HTML5", "CSS3", "Sass"]
   },
   {
-    category: "UI Libraries",
+    category: "skills.ui",
     technologies: ["Tailwind CSS", "Material-UI", "Styled Components"]
   },
   {
-    category: "Tools & Workflow",
+    category: "skills.tools",
     technologies: ["Git", "Webpack", "Vite" ]
   },
   {
-    category: "Design & UX",
+    category: "skills.design",
     technologies: ["Figma", "Adobe XD" ]
   },
   {
-    category: "Testing",
+    category: "skills.testing",
     technologies: ["Jest", "Cypress", "React Testing Library", "Vitest"]
   }
 ];
 
 export function Skills() {
+    const { t } = useLanguage();
+  
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl mb-4">
-            Technical Expertise
+            {t("skills.title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable, and user-friendly web applications
+            {t('skills.subtitle')}
           </p>
         </div>
         
@@ -46,7 +51,7 @@ export function Skills() {
             <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-0">
                 <h3 className="mb-4 text-primary">
-                  {skill.category}
+                  {t(skill.category)}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {skill.technologies.map((tech, techIndex) => (

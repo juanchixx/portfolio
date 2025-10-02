@@ -1,46 +1,49 @@
+"use client";
+
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
+import { useLanguage } from "./LanguageContext";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-muted/30 py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="space-y-2">
-              <h3 className="text-lg">John Doe</h3>
+              <h3 className="text-lg">Juan M Diaz</h3>
               <p className="text-sm text-muted-foreground">
-                Frontend UX/UI React Developer
+                {t('hero.title')}
               </p>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Crafting exceptional digital experiences through innovative design and clean, performant code.
+              {t('hero.subtitle')}
             </p>
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-sm">Quick Links</h4>
+            <h4 className="text-sm">Links</h4>
             <div className="space-y-2 text-sm">
-              <div><a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a></div>
-              <div><a href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">Skills</a></div>
-              <div><a href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">Projects</a></div>
-              <div><a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></div>
+              <div><a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</a></div>
+              <div><a href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.skills')}</a></div>
+              <div><a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a></div>
             </div>
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-sm">Services</h4>
+            <h4 className="text-sm">{t('footer.services')}</h4>
             <div className="space-y-2 text-sm">
-              <div className="text-muted-foreground">Frontend Development</div>
-              <div className="text-muted-foreground">UI/UX Design</div>
-              <div className="text-muted-foreground">React Applications</div>
-              <div className="text-muted-foreground">Code Reviews</div>
+              <div className="text-muted-foreground">{t('footer.frontend')}</div>
+              <div className="text-muted-foreground">{t('footer.uiux')}</div>
+              <div className="text-muted-foreground">{t('footer.react')}</div>
             </div>
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-sm">Connect</h4>
+            <h4 className="text-sm">{t('footer.connect')}</h4>
             <div className="flex gap-2">
               <Button variant="ghost" size="icon" className="h-8 w-8">
                 <Github className="h-4 w-4" />
@@ -62,14 +65,12 @@ export function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-1">
-            Made with <Heart className="h-4 w-4 text-red-500" /> by John Doe
+            {t('footer.madewith')} <Heart className="h-4 w-4 text-red-500" /> {t('footer.by')}
           </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
           </div>
           <div>
-            © 2024 John Doe. All rights reserved.
+            2025 Juan M Diaz.
           </div>
         </div>
       </div>

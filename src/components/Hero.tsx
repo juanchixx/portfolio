@@ -1,10 +1,15 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ArrowDown, Github as GithubIcon, Linkedin, Mail } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import Link from "next/link";
+import { useLanguage } from "./LanguageContext";
 
 export function Hero() {
+	const { t } = useLanguage();
+
 	return (
 		<section className="min-h-screen flex items-center justify-center relative overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10" />
@@ -14,29 +19,29 @@ export function Hero() {
 					<div className="space-y-8">
 						<div className="space-y-4">
 							<Badge variant="secondary" className="w-fit">
-								Available for new opportunities
+								{t("hero.badge")}
 							</Badge>
 							<h1 className="text-4xl md:text-6xl lg:text-7xl">
-								Frontend UX/UI
-								<span className="block text-primary">
-									React Developer
-								</span>
+								{t("hero.title")}
 							</h1>
 							<p className="text-lg text-muted-foreground max-w-lg">
-								Crafting exceptional digital experiences through
-								innovative design and clean, performant code.
-								Specializing in React, TypeScript, and modern
-								UI/UX principles.
+								{t("hero.subtitle")}
 							</p>
 						</div>
 
 						<div className="flex flex-wrap gap-4">
 							<Button size="lg" className="group">
-								View My Work
+								{t("hero.cta")}
 								<ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
 							</Button>
-							<Button variant="outline" size="lg">
-								Download Resume
+							<Button asChild variant="outline" size="lg">
+								<Link
+									href="/cv_juandiaz.pdf"
+									target="_blank"
+									download
+								>
+									{t("hero.downloadcv")}
+								</Link>
 							</Button>
 						</div>
 
@@ -72,11 +77,13 @@ export function Hero() {
 
 					<div className="relative">
 						<div className="relative rounded-2xl overflow-hidden shadow-2xl">
-							<ImageWithFallback
-								src="https://images.unsplash.com/photo-1719400471588-575b23e27bd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8ZW58MXx8fHwxNzU4NjAzOTk4fDA&ixlib=rb-4.1.0&q=80&w=1080"
-								alt="Professional developer workspace"
-								className="w-full h-[500px] object-cover"
+              <div className="w-full h-[500px] object-cover">
+							<Image
+								src="/hero_img.png"
+								alt="windows with Code and Figma"
+                fill
 							/>
+              </div>
 							<div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
 						</div>
 
@@ -84,16 +91,18 @@ export function Hero() {
 						<div className="absolute -top-4 -right-4 bg-card border rounded-lg p-4 shadow-lg">
 							<div className="flex items-center gap-2">
 								<div className="w-2 h-2 bg-green-500 rounded-full" />
-								<span className="text-sm">Available</span>
+								<span className="text-sm">
+									{t("hero.available")}
+								</span>
 							</div>
 						</div>
 
 						<div className="absolute -bottom-4 -left-4 bg-card border rounded-lg p-4 shadow-lg">
 							<div className="text-sm">
 								<div className="text-muted-foreground">
-									Experience
+									{t("hero.experience")}
 								</div>
-								<div>5+ Years</div>
+								<div>{t("hero.years")}</div>
 							</div>
 						</div>
 					</div>
