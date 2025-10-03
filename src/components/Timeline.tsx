@@ -121,33 +121,18 @@ export function Timeline() {
                 </motion.div>
 
                 {/* Parallax background element */}
-                <motion.div
+                {/* <motion.div
                   style={{ 
                     y: useTransform(scrollYProgress, [0, 1], [index * 30, -(index * 30)])
                   }}
                   className={`hidden lg:block absolute ${
                     index % 2 === 0 ? 'right-8' : 'left-8'
                   } top-1/2 transform -translate-y-1/2 w-24 h-24 xl:w-32 xl:h-32 bg-gradient-to-br from-primary/5 to-primary/10 rounded-full -z-10`}
-                />
+                /> */}
               </motion.div>
             ))}
           </div>
         </div>
-
-        {/* Decorative elements */}
-        <motion.div
-          style={{ 
-            rotate: useTransform(scrollYProgress, [0, 1], [0, 360])
-          }}
-          className="hidden md:block absolute top-10 right-10 w-6 h-6 border-2 border-primary/30 rounded-full -z-10"
-        />
-        
-        <motion.div
-          style={{ 
-            rotate: useTransform(scrollYProgress, [0, 1], [0, -180])
-          }}
-          className="hidden md:block absolute bottom-10 left-10 w-8 h-8 border-2 border-primary/20 rounded-square transform rotate-45 -z-10"
-        />
       </div>
     </section>
   );

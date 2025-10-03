@@ -1,5 +1,4 @@
 import emailjs from '@emailjs/browser';
-import { FormEvent } from "react";
 
 export const sendEmail = (form: React.RefObject<HTMLFormElement>) => {
     if (!form) return;
