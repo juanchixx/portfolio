@@ -18,6 +18,7 @@ const translations = {
 		"nav.projects": "Projects",
 		"nav.contact": "Contact",
 		"nav.hire": "Hire Me",
+		"nav.timeline": "Timeline",
 
 		// Hero
 		"hero.badge": "Available for new opportunities",
@@ -145,6 +146,7 @@ const translations = {
 		"nav.projects": "Proyectos",
 		"nav.contact": "Contacto",
 		"nav.hire": "Contrátame",
+        "nav.timeline": "Línea de Tiempo",
 
 		// Hero
 		"hero.badge": "Disponible para nuevas oportunidades",

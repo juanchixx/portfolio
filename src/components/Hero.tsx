@@ -30,9 +30,13 @@ export function Hero() {
 						</div>
 
 						<div className="flex flex-wrap gap-4">
-							<Button size="lg" className="group">
-								{t("hero.cta")}
-								<ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+							<Button asChild size="lg" className="group">
+								<a
+									href={"#timeline"}
+								>
+									{t("hero.cta")}
+									<ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+								</a>
 							</Button>
 							<Button asChild variant="outline" size="lg">
 								<Link
@@ -77,13 +81,13 @@ export function Hero() {
 
 					<div className="relative">
 						<div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <div className="w-full h-[500px] object-cover">
-							<Image
-								src="/hero_img.png"
-								alt="windows with Code and Figma"
-                fill
-							/>
-              </div>
+							<div className="w-full h-[500px] object-cover">
+								<Image
+									src="/hero_img.png"
+									alt="windows with Code and Figma"
+									fill
+								/>
+							</div>
 							<div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
 						</div>
 

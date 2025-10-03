@@ -25,7 +25,7 @@ export function Navigation() {
 	const navItems = [
 		{ label: t("nav.about"), href: "#about" },
 		{ label: t("nav.skills"), href: "#skills" },
-		// { label: "nav.projects", href: "#projects" },
+		{ label: t("nav.timeline"), href: "#timeline" },
 		{ label: t("nav.contact"), href: "#contact" },
 	];
 
