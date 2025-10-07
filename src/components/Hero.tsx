@@ -11,7 +11,7 @@ export function Hero() {
 	const { t } = useLanguage();
 
 	return (
-		<section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+		<section className="min-h-screen flex items-center justify-center relative overflow-hidden mt-18 lg:mt-0">
 			<div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10" />
 
 			<div className="container mx-auto px-6 relative z-10">
