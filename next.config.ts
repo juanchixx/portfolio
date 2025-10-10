@@ -1,8 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  assetPrefix: 'https://juanmdiaz.dev',
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/jobfinder",
+          destination: "https://juanmdiaz.dev/jobfinder",
+        },
+        {
+          source: "/jobfinder/:path*",
+          destination: "https://juanmdiaz.dev/jobfinder/:path*",
+        },
+      ],
+    };
+  },
 };
 
 export default nextConfig;
