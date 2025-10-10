@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/jobfinder/(.*)",
-      "destination": "https://jobfinder-peach-zeta.vercel.app/$1"
+      "source": "/jobfinder",
+      "destination": "https://jobfinder-peach-zeta.vercel.app"
     }
   ]
 }
