@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
+      "source": "/jobfinder",
+      "destination": "https://jobfinder-peach-zeta.vercel.app/"
+    },
+    {
       "source": "/jobfinder/:path*",
-      "destination": "https://jobfinder-peach-zeta.vercel.app/jobfinder/:path*"
+      "destination": "https://jobfinder-peach-zeta.vercel.app/:path*"
     }
   ]
 }
