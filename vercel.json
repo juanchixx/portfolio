@@ -3,10 +3,6 @@
     {
       "source": "/jobfinder/:path*",
       "destination": "https://jobfinder-peach-zeta.vercel.app/:path*"
-    },
-    {
-      "source": "/jobfinder",
-      "destination": "https://jobfinder-peach-zeta.vercel.app/jobfinder"
     }
   ]
 }
